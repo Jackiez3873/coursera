@@ -2,9 +2,15 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      Homepage
-    </div>
+    <React.Fragment className="App">
+      
+      
+      <Header />
+      <Nav />
+      <Main />
+      <Footer />
+      
+    </React.Fragment>
   );
 }
 
