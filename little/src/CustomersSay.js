@@ -1,4 +1,4 @@
-function Footer() {
+function CustomersSay() {
     return (
       <React.Fragment className="App">
       
@@ -8,4 +8,4 @@ function Footer() {
       </React.Fragment>
     );
   }
-  export default Footer;
+  export default CustomersSay;

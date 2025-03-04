@@ -3,19 +3,22 @@ function Nav() {
       <React.Fragment className="Nav">
         <ul>
             <li>
-                <a>
-
-                </a>
+                <Link rel="Home" href="#home"/>
             </li>
             <li>
-                <a>
-
-                </a>
+                <Link rel="About" href="#about"/>
             </li>
             <li>
-                <a>
-                    
-                </a>
+                <Link rel="Menu" href="#menu"/>
+            </li>
+            <li>
+                <Link rel="Reservations" href="#reservations"/>
+            </li>
+            <li>
+                <Link rel="Order Online" href="order online"/>
+            </li>
+            <li>
+                <Link rel="Login" href="#login"/>
             </li>
         </ul>
 
@@ -23,3 +26,4 @@ function Nav() {
       </React.Fragment>
     );
   }
+  export default Nav;
