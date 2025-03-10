@@ -1,11 +1,12 @@
+import React from 'react';
 function CustomersSay() {
     return (
-      <React.Fragment className="App">
+      <>
       
         
       
         
-      </React.Fragment>
+      </>
     );
   }
   export default CustomersSay;

@@ -1,10 +1,11 @@
 import BookingForm from "./BookingForm";
-
+import React from 'react';
+import Header from "./Header";
 function BookingPage() {
     return (
-      <React.Fragment className="App">
+      <>
         <BookingForm/>
-      </React.Fragment>
+      </>
     );
   }
-  export default BookingPage;
+export default BookingPage;

@@ -1,22 +1,21 @@
-import './App.css';
-import Header from "./Header";
-import Nav from "./Nav";
-import Main from "./Main";
-import Footer from "./Footer";
-
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import BookingPage from './BookingPage';
+import HomePage from './Homepage';
+import Nav from './Nav';
 
 function App() {
-  return (
-    <React.Fragment className="App">
-      
-      
-      <Header />
-      <Nav />
-      <Main />
-      <Footer />
-      
-    </React.Fragment>
-  );
-}
-
-export default App;
+    return (
+      <>
+        <Router>
+          <Nav/>
+          <Routes>
+            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/booking" element={<BookingPage />}></Route>
+          </Routes>
+        </Router>
+        
+      </>
+    );
+  }
+  export default App;

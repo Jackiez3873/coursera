@@ -1,11 +1,10 @@
+import React from 'react';
+import Header from './Header';
 function HomePage() {
     return (
-      <React.Fragment className="App">
-      
-        
-      
-        
-      </React.Fragment>
+      <>
+      </>
     );
   }
-  export default HomePage;
+  
+export default HomePage;

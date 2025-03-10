@@ -1,11 +1,12 @@
+import React from 'react';
 function CallToAction() {
     return (
-      <React.Fragment className="App">
+      <>
       
         
       
         
-      </React.Fragment>
+      </>
     );
   }
   export default CallToAction;
