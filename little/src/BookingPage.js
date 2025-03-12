@@ -9,4 +9,5 @@ function BookingPage(submitForm) {
       </>
     );
   }
+  
 export default BookingPage;
