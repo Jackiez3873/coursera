@@ -4,7 +4,6 @@ import Header from "./Header";
 function BookingPage(submitForm) {
     return (
       <>
-      dsfdfdstdhgffffggdf
         <BookingForm submitForm/>
       </>
     );

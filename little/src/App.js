@@ -22,19 +22,5 @@ function App() {
   const availableTimes = useReducer(updateTimes, initializeTimes);
   
 
-    return (
-      <>
-        <Router>
-          <Nav/>
-          <Routes>
-            <Route path="/" element={<HomePage />}></Route>
-            <Route path="/booking" element={<BookingPage availableTimes submitForm/>}></Route>
-            <Route path="/confirm" element={<ConfirmBooking/>}></Route>
-         
-          </Routes>
-        </Router>
-        
-      </>
-    );
   }
   export default App;
