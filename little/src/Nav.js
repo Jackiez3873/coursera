@@ -13,6 +13,9 @@ function Nav() {
                 <li>
                     <Link to="/booking">Booking</Link>
                 </li>
+                <li>
+                    <Link to="/confirm">Confirm Booking</Link>
+                </li>
             </ul>
         </nav>
         

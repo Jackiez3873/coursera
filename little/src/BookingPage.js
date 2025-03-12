@@ -1,10 +1,11 @@
 import BookingForm from "./BookingForm";
 import React from 'react';
 import Header from "./Header";
-function BookingPage() {
+function BookingPage(submitForm) {
     return (
       <>
-        <BookingForm/>
+      dsfdfdstdhgffffggdf
+        <BookingForm submitForm/>
       </>
     );
   }
