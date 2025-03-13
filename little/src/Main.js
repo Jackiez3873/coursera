@@ -4,32 +4,40 @@ import BookingPage from './BookingPage';
 import HomePage from './Homepage';
 import Nav from './Nav';
 import { useReducer } from 'react';
-function Main() {
+const Main = () => {
 
-  const updateTimes = () => {
-    fetchdata()
+    const submitAPI = function(formData) {
+        return true;
     }
 
-    const initializeTimes = () => {
+  function updateTimes(state, data) {
+    return {availableTimes: fetchAPI(new Date())}
+  }
 
+  const initialState = {availableTimes: fetchAPI(new Date())};
+  const [state, dispatch] = useReducer(updateTimes, initialState);
+
+    const navigate = useNavigate();
+    function submitForm (formData) {
+        if(submitAPI(formData)){
+            navigate("/confirmed");
+        }
     }
-    const submitForm = () => {
 
-    }
 
-    const availableTimes = useReducer(updateTimes, initializeTimes);
+   
         return (
-            <>
-            <Router>
-                <Nav/>
+            <main>
+            <Routes>
                 <Routes>
-                   < Route path="/" element={<HomePage />}></Route>
-                   <Route path="/booking" element={<BookingPage availableTimes submitForm/>}></Route>
-                   <Route path="/confirm" element={<ConfirmBooking/>}></Route>
-                     
+                   <Route path ='/' element={<Header/>}/>
+                   < Route path="/" element={<HomePage/>}></Route>
+                   <Route path="/booking" element={<BookingPage availableTimes ={state} dispatch={dispatch} submitForm = {submitForm}/>}/>
+                   <Route path="/confirm" element={<ConfirmBooking/>}/>
+                   <Route path ='/' element={<Header/>}/>
                 </Routes>
-            </Router>
-            </>
+            </Routes>
+            </main>
         );
 }
 export default Main;

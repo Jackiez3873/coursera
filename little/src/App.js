@@ -4,23 +4,21 @@ import BookingPage from './BookingPage';
 import HomePage from './Homepage';
 import Nav from './Nav';
 import { useReducer } from 'react';
-
+import Header from './Header';
+import BookingForm from './BookingForm';
+import Main from './Main';
 function App() {
 
  
-  const updateTimes = () => {
-      fetchdata()
-  }
-
-  const initializeTimes = () => {
-
-  }
-  const submitForm = () => {
-
-  }
-
+  
   const availableTimes = useReducer(updateTimes, initializeTimes);
   
+  return (
+      <>
+        <Nav/>
+        <Main/>
+      </>
+    );
 
   }
   export default App;

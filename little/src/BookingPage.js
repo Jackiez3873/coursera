@@ -1,10 +1,10 @@
 import BookingForm from "./BookingForm";
 import React from 'react';
 import Header from "./Header";
-function BookingPage(submitForm) {
+const BookingPage = (props) => {
     return (
       <>
-        <BookingForm submitForm/>
+        <BookingForm availableTimes={props.availableTimes} dispatch={props.dispatch} SubmitForm={props.SubmitForm}/>
       </>
     );
   }

@@ -1,46 +1,62 @@
 import React from 'react';
 import { useState } from 'react';
-function BookingForm(availableTimes) {
-  const [availableTimes, setTime] = useState();
+const BookingForm = (props) => {
+  const [date, setDate] = useState();
+  const [time, setTime] = useState();
+  const [guests, setGuests] = useState();
+  const [occassion, setOccasion] = useState();
 
-  const handleChange = (event) => {
-    setTime(event.target.value);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.SubmitForm(e);
+  }
+
+  const handleChange = (e) => {
+    setDate(e);
+    props.dispatch(e);
   }
     return (
-      <>
       
-  <form>
-   <label>Choose date
+      
+  <form onSubmit={handleSubmit}>
+    <fieldset>
+      <div>
+      <label htmlFor="book-date">Choose date</label>
+      <input id="book-date" value={date} onChange={(e) => {handleChange(e.target.value)}} type="date" required/>
+      </div>
+      <div>
+      <label htmlFor="book-time">Choose Time</label>
+      <select id="book-time" value={times} onChange={(e) => setTImess(e.target.value)}>
+      <option value="">Select a time</option> 
+         {
+            props.availableTimes.availableTimes.map(availableTimes => {return <option key={availableTimes}>{availableTimes}</option>})
+         }
+      </select>
+      </div>
+      <div>        
+        <label htmlFor="book-guests">Number of guests</label>
+        <input id="book-guests" min='1' value={guests} onChange={(e) => setGuests(e.target.value)}type="number"/>
+      </div>
+      <div>
+        <label htmlFor='book-occasion'>Occasion</label>
+      <select id='book-occasion' key={occasion} value={occasion} onChange={e => setOccasion(e.target.value)}>
+        <option>Birthday</option>
+        <option>Anniversary</option>
+      </select>
+      </div>
+    <div>
+      <input aria-label='onClick' type="submit" value={"Make your reservation"}/>
+    </div>
+ 
+   
 
-    <input type="date"/>
-   </label>
+    </fieldset>
    
-   <label>Choose time
-     <select value={availableTime} OnChange={handleChange}>
-      <option value="17:00">17:00</option>
-      <option value="18:00">18:00</option>
-      <option value="19:00">19:00</option>
-      <option value="20:00">20:00</option>
-      <option value="21:00">21:00</option>
-      <option value="22:00">22:00</option>
-     </select>
-   </label>
-   <label>Number of guests
-     <input type="number" placeholder="1" min="1" max="10" id="guests"/>
-   </label>
-   
-   <label>Occasion
-    <select value={Occasion} onChange={}>
-      <option value="Birthday">Birthday</option>
-      <option value="Anniversary">Anniversary</option>
-   </select>
-    <input type="submit" value="Make Your reservation"/>
-   </label>
+  
+
    
    
 </form>
-
-      </>
     );
   }
 const root = ReactDOM.createRoot(document.getElementById('root'));

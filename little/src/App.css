@@ -36,4 +36,24 @@
     transform: rotate(360deg);
   }
 }
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+a{text-decoration: none;}
+
+li {
+  list-style: none;
+}
+
+.bar {
+  width: 25px;
+  height: 4px;
+  background-color: black;
+  margin: auto;
+}                                                                                                                                                                
+  
+
+
 
